@@ -1,0 +1,147 @@
+package com.snow.base;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.log4j.xml.DOMConfigurator;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import com.service.pageobjectmanager.FileReaderManager;
+import com.snow.log.Log;
+
+import com.snow.util.TestUtil;
+
+
+public class TestBase {
+	
+	public static Properties prop;
+	 public static WebDriver driver;
+	 public static WebDriver driver2;
+	 
+	
+	public TestBase()
+	{
+		try
+		{
+		prop=new Properties();
+		FileInputStream ip=new FileInputStream(System.getProperty("user.dir")+"/src/main/java/com/snow/config/config.properties");
+		prop.load(ip);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+	public static WebDriver  initialization(String string)
+	{
+		System.out.println("Initial : "+driver);
+		DOMConfigurator.configure(System.getProperty("user.dir")+prop.getProperty("Log4JFilePath"));
+		Log.info("Successfully entered into the application");
+
+		String browsername=prop.getProperty("browser");
+		if(browsername.equals("chrome"))
+		{
+			
+			//System.setProperty("webdriver.chrome.driver",prop.getProperty("ChromedriverPath"));
+			System.setProperty("webdriver.chrome.driver",FileReaderManager.getInstance().getConfigReader().getDriverPath());
+			System.out.println("Initial2 : "+driver);
+			
+			driver=new ChromeDriver();
+			System.out.println("Initial3 : "+driver);
+			
+		}
+		else if(browsername.equals("FF"))
+		{
+			//System.setProperty("webdriver.chrome.driver","C://Users//chaurma//eclipse-workspace//ServiceNowPageObjectModel//Drivers//chromedriver.exe");
+			//driver=new FirefoxDriver();
+		}
+		
+		System.out.println("Initial3.1 : "+driver);
+		driver.manage().window().maximize();
+		System.out.println("Initial4 : "+driver);
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(TestUtil.implicit_wait, TimeUnit.SECONDS);
+		driver.get(prop.getProperty(string));
+		return driver;
+	}
+	
+public static WebDriver getWebDriver()
+{
+	return TestBase.driver;
+	
+}
+public static WebDriver getWebDriver2()
+{
+	return TestBase.driver2;
+	
+}
+
+	public static WebDriver  initialization2( String string)
+	{
+		
+		
+		DOMConfigurator.configure(System.getProperty("user.dir")+prop.getProperty("Log4JFilePath"));
+		Log.info("Successfully entered into the application");
+
+		String browsername=prop.getProperty("browser");
+		if(browsername.equals("chrome"))
+		{
+			
+			//System.setProperty("webdriver.chrome.driver",prop.getProperty("ChromedriverPath"));
+			System.setProperty("webdriver.chrome.driver",FileReaderManager.getInstance().getConfigReader().getDriverPath());
+			driver2=new ChromeDriver();
+			
+			
+		}
+		else if(browsername.equals("FF"))
+		{
+			//System.setProperty("webdriver.chrome.driver","C://Users//chaurma//eclipse-workspace//ServiceNowPageObjectModel//Drivers//chromedriver.exe");
+			//driver=new FirefoxDriver();
+		}
+		driver2.manage().window().maximize();
+		driver2.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+		driver2.manage().timeouts().implicitlyWait(TestUtil.implicit_wait, TimeUnit.SECONDS);
+		driver2.get(prop.getProperty(string));
+		return driver2;
+	}
+public static File captureScreenMethod(WebDriver driver2,String TestcaseNumber) {
+		
+		
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyy_mm_dd_hh_mm_ss");
+		String timeStamp=dateFormat.format(new Date());
+		TakesScreenshot tk=((TakesScreenshot)driver2);
+	File src=	tk.getScreenshotAs(OutputType.FILE);
+	String str=FileReaderManager.getInstance().getConfigReader().getScreenshotFolderPath();
+	System.out.println("Str :"+str);
+	File dst=new File(str+prop.getProperty(TestcaseNumber)+ "\\screenshots" + timeStamp + ".png");
+	try {
+		
+		FileUtils.copyFile(src, dst);
+	} catch (IOException e) {
+		
+		e.printStackTrace();
+	}
+	return dst;
+	
+}
+public static String getDataFromPropertyFile(String data)
+{
+	return prop.getProperty(data);
+	
+}
+
+
+}
