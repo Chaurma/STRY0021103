@@ -35,7 +35,7 @@ format = {
 		"rerun:target/cucumber-reports/rerun.txt" },
  dryRun = false, monochrome = true, strict = true 
 
-//,tags = {"@First","~@Second","~@Third","~@Fourth","~@Fifth"}
+,tags = {"@First","@Second","~@Third","~@Fourth","~@Fifth"}
 //,tags = {"@First,@Second,@Fourth,@Fifth,@Sixth,@Seventh,@Eight"}
 )
 public class testrunner1It {

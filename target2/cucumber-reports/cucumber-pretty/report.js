@@ -171,7 +171,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 1231100,
+  "duration": 1470300,
   "status": "passed"
 });
 formatter.scenario({
@@ -320,7 +320,7 @@ formatter.match({
   "location": "ReusableMLFIncBrigdeWithEX.user_launch_the_ITIL_view()"
 });
 formatter.result({
-  "duration": 32295057700,
+  "duration": 10567844200,
   "status": "passed"
 });
 formatter.match({
@@ -333,7 +333,7 @@ formatter.match({
   "location": "TC01_STRY0021103.type_in_filter_navigator(String)"
 });
 formatter.result({
-  "duration": 67847820100,
+  "duration": 6723402300,
   "status": "passed"
 });
 formatter.match({
@@ -346,15 +346,16 @@ formatter.match({
   "location": "TC01_STRY0021103.cliks_on_the_option(String)"
 });
 formatter.result({
-  "duration": 14991400800,
+  "duration": 4484074700,
   "status": "passed"
 });
 formatter.match({
   "location": "TC01_STRY0021103.clicks_on_the_New_button()"
 });
 formatter.result({
-  "duration": 21321585900,
-  "status": "passed"
+  "duration": 6032429100,
+  "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d78.0.3904.87)\n  (Driver info: chromedriver\u003d2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform\u003dWindows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027VBX00245\u0027, ip: \u002710.232.175.150\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_231\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.39.562718 (9a2698cba08cf5..., userDataDir: C:\\Users\\chaurma\\AppData\\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 78.0.3904.87, webStorageEnabled: true}\nSession ID: 94a290758bacbf33615aad2531a95a8a\n*** Element info: {Using\u003dcss selector, value\u003dframe[name\u003d\u0027gsft_main\u0027],iframe[name\u003d\u0027gsft_main\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:424)\r\n\tat org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:878)\r\n\tat com.snow.customfunction.customefunction.SwitchToFrmaeByNameOrID(customefunction.java:168)\r\n\tat StepDefinition.TC01_STRY0021103.clicks_on_the_New_button(TC01_STRY0021103.java:95)\r\n\tat ✽.And Clicks on the New button(src/main/java/com/snow/feature/STR0021103_test3.feature:14)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "arguments": [
@@ -366,8 +367,7 @@ formatter.match({
   "location": "ReusableStepDefFile.take_Screenshot_from_first_driver(String)"
 });
 formatter.result({
-  "duration": 2986357500,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -379,8 +379,7 @@ formatter.match({
   "location": "TC01_STRY0021103.fill_the_requested_by_as(String)"
 });
 formatter.result({
-  "duration": 13384202000,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -392,8 +391,7 @@ formatter.match({
   "location": "ReusableStepDefFile.take_Screenshot_from_first_driver(String)"
 });
 formatter.result({
-  "duration": 1657246700,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -405,15 +403,13 @@ formatter.match({
   "location": "TC01_STRY0021103.fille_the_short_description_as(String)"
 });
 formatter.result({
-  "duration": 4542233500,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "TC01_STRY0021103.scroll_to_the_submit_button()"
 });
 formatter.result({
-  "duration": 4267066600,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -425,15 +421,13 @@ formatter.match({
   "location": "ReusableStepDefFile.take_Screenshot_from_first_driver(String)"
 });
 formatter.result({
-  "duration": 1233557200,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "TC01_STRY0021103.clicks_on_the_submit_button()"
 });
 formatter.result({
-  "duration": 20505811500,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -445,15 +439,13 @@ formatter.match({
   "location": "TC01_STRY0021103.store_SIR_number_in_sheet_in_row(String)"
 });
 formatter.result({
-  "duration": 8333522200,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "TC01_STRY0021103.sir_should_be_submitted_sucessfully()"
 });
 formatter.result({
-  "duration": 45800,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -465,16 +457,13 @@ formatter.match({
   "location": "ReusableStepDefFile.take_Screenshot_from_first_driver(String)"
 });
 formatter.result({
-  "duration": 1392423200,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "TC01_STRY0021103.search_created_SIR()"
 });
 formatter.result({
-  "duration": 50908657900,
-  "error_message": "java.lang.NullPointerException\r\n\tat StepDefinition.TC01_STRY0021103.search_created_SIR(TC01_STRY0021103.java:177)\r\n\tat ✽.And search created SIR(src/main/java/com/snow/feature/STR0021103_test3.feature:25)\r\n",
-  "status": "failed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "TC01_STRY0021103.scroll_to_the_update_button()"
@@ -521,7 +510,7 @@ formatter.result({
   "status": "skipped"
 });
 formatter.after({
-  "duration": 729000,
+  "duration": 1310600,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -671,7 +660,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 200300,
+  "duration": 426900,
   "status": "passed"
 });
 formatter.scenario({
@@ -820,7 +809,7 @@ formatter.match({
   "location": "ReusableMLFIncBrigdeWithEX.user_launch_the_ITIL_view()"
 });
 formatter.result({
-  "duration": 32099197100,
+  "duration": 4023926700,
   "status": "passed"
 });
 formatter.match({
@@ -833,7 +822,7 @@ formatter.match({
   "location": "TC01_STRY0021103.type_in_filter_navigator(String)"
 });
 formatter.result({
-  "duration": 8286312300,
+  "duration": 2339508300,
   "status": "passed"
 });
 formatter.match({
@@ -846,15 +835,16 @@ formatter.match({
   "location": "TC01_STRY0021103.cliks_on_the_option(String)"
 });
 formatter.result({
-  "duration": 8861425100,
+  "duration": 6367061500,
   "status": "passed"
 });
 formatter.match({
   "location": "TC01_STRY0021103.clicks_on_the_New_button()"
 });
 formatter.result({
-  "duration": 12002547400,
-  "status": "passed"
+  "duration": 6036506600,
+  "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d78.0.3904.87)\n  (Driver info: chromedriver\u003d2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform\u003dWindows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027VBX00245\u0027, ip: \u002710.232.175.150\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_231\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.39.562718 (9a2698cba08cf5..., userDataDir: C:\\Users\\chaurma\\AppData\\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 78.0.3904.87, webStorageEnabled: true}\nSession ID: 39deecbe9adc9fdfc7fa24a9092715ed\n*** Element info: {Using\u003dcss selector, value\u003dframe[name\u003d\u0027gsft_main\u0027],iframe[name\u003d\u0027gsft_main\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:424)\r\n\tat org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:878)\r\n\tat com.snow.customfunction.customefunction.SwitchToFrmaeByNameOrID(customefunction.java:168)\r\n\tat StepDefinition.TC01_STRY0021103.clicks_on_the_New_button(TC01_STRY0021103.java:95)\r\n\tat ✽.And Clicks on the New button(src/main/java/com/snow/feature/STR0021103_test3.feature:42)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "arguments": [
@@ -866,8 +856,7 @@ formatter.match({
   "location": "ReusableStepDefFile.take_Screenshot_from_first_driver(String)"
 });
 formatter.result({
-  "duration": 1288347200,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -879,8 +868,7 @@ formatter.match({
   "location": "TC01_STRY0021103.fill_the_requested_by_as(String)"
 });
 formatter.result({
-  "duration": 13985233100,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -892,8 +880,7 @@ formatter.match({
   "location": "ReusableStepDefFile.take_Screenshot_from_first_driver(String)"
 });
 formatter.result({
-  "duration": 835888700,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -905,15 +892,13 @@ formatter.match({
   "location": "TC01_STRY0021103.fille_the_short_description_as(String)"
 });
 formatter.result({
-  "duration": 1881369100,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "TC01_STRY0021103.scroll_to_the_submit_button()"
 });
 formatter.result({
-  "duration": 3396977600,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -925,15 +910,13 @@ formatter.match({
   "location": "ReusableStepDefFile.take_Screenshot_from_first_driver(String)"
 });
 formatter.result({
-  "duration": 1279776800,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "TC01_STRY0021103.clicks_on_the_submit_button()"
 });
 formatter.result({
-  "duration": 9766832000,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -945,15 +928,13 @@ formatter.match({
   "location": "TC01_STRY0021103.store_SIR_number_in_sheet_in_row(String)"
 });
 formatter.result({
-  "duration": 2894380700,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "TC01_STRY0021103.sir_should_be_submitted_sucessfully()"
 });
 formatter.result({
-  "duration": 594700,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -965,22 +946,19 @@ formatter.match({
   "location": "ReusableStepDefFile.take_Screenshot_from_first_driver(String)"
 });
 formatter.result({
-  "duration": 2798220200,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "TC01_STRY0021103.search_created_SIR()"
 });
 formatter.result({
-  "duration": 47876440600,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "TC01_STRY0021103.scroll_to_the_update_button()"
 });
 formatter.result({
-  "duration": 3871713000,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -1000,8 +978,7 @@ formatter.match({
   "location": "TC01_STRY0021103.verify_field_Checkbox_in_the_tab_underneath(String,String,String)"
 });
 formatter.result({
-  "duration": 3462522600,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -1013,18 +990,16 @@ formatter.match({
   "location": "ReusableStepDefFile.take_Screenshot_from_first_driver(String)"
 });
 formatter.result({
-  "duration": 469027400,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "ReusableStepDefFile.close_the_browser()"
 });
 formatter.result({
-  "duration": 1718680900,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
-  "duration": 305800,
+  "duration": 1234000,
   "status": "passed"
 });
 });
