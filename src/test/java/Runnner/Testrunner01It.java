@@ -27,7 +27,7 @@ import cucumber.api.junit.Cucumber;
 		
 		
 		},
-plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/CucumberReport/Extent/ExtentReport.html"},
+plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/CucumberReport/ExtentReport.html"},
 
 glue = {"StepDefinition","ReusableStepDefinitionFile"}, 
 format = {
@@ -38,7 +38,7 @@ format = {
 		"junit:target/CucumberReport/CucumberJunit.xml","rerun:target/CucumberReport/rerun.txt" },
  dryRun = false, monochrome = true, strict = true 
 
-,tags = {"@Second,@Report","~@Fifth"}
+,tags = {"@Second","~@Fifth"}
 //,tags = {"@First,@Second,@Fourth,@Fifth,@Sixth,@Seventh,@Eight"}
 )
 

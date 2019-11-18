@@ -1,0 +1,314 @@
+# Created at 2019-11-18T02:34:16.250
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:390)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+# Created at 2019-11-18T02:34:19.465
+Unexpected IOException with stream: Inspected element : [[ChromeDriver: chrome on XP (56073cc9895fd64e4305267d15c6f496)] -> xpath: //*[@id="sn_si_incident.short_description"]]
+
+
+# Created at 2019-11-18T02:34:21.192
+Unexpected IOException with stream: Dir : \\C:\Users\chaurma\Downloads\WorkSpace\STRY0021103_TC02_AC
+
+
+# Created at 2019-11-18T02:34:21.327
+Unexpected IOException with stream: QQQQQQQQ
+
+
+# Created at 2019-11-18T02:34:23.170
+Unexpected IOException with stream: Close first browser
+
+
+# Created at 2019-11-18T02:34:23.171
+Unexpected IOException with stream: End
+
+
+# Created at 2019-11-18T02:34:23.172
+Unexpected IOException with stream: Finally
+
+
+# Created at 2019-11-18T02:34:23.174
+Unexpected IOException with stream: Close first browser
+
+
+# Created at 2019-11-18T02:34:23.176
+Unexpected IOException with stream: End
+
+
+# Created at 2019-11-18T02:34:23.177
+Unexpected IOException with stream: Finally
+
+
+# Created at 2019-11-18T02:34:33.192
+Unexpected IOException with stream: Output to Zip : C:\Users\chaurma\Downloads\WorkSpace\SnowNowPageObjectFramework//Folder.zip
+
+
+# Created at 2019-11-18T02:34:33.194
+Unexpected IOException with stream: File Added : CucumberJunit.xml
+
+
+# Created at 2019-11-18T02:34:33.197
+Unexpected IOException with stream: File Added : CucumberJunit2.xml
+
+
+# Created at 2019-11-18T02:34:33.202
+Unexpected IOException with stream: File Added : CumcumberJson.json
+
+
+# Created at 2019-11-18T02:34:33.206
+Unexpected IOException with stream: File Added : CumcumberJson2.json
+
+
+# Created at 2019-11-18T02:34:33.210
+Unexpected IOException with stream: File Added : Extent\ExtentReport.html
+
+
+# Created at 2019-11-18T02:34:33.225
+Unexpected IOException with stream: File Added : Extent\ExtentReport2.html
+
+
+# Created at 2019-11-18T02:34:33.231
+Unexpected IOException with stream: File Added : ExtentReport2.html
+
+
+# Created at 2019-11-18T02:34:33.235
+Unexpected IOException with stream: File Added : rerun.txt
+
+
+# Created at 2019-11-18T02:34:33.237
+Unexpected IOException with stream: File Added : rerun2.txt
+
+
+# Created at 2019-11-18T02:34:33.240
+Unexpected IOException with stream: Folder successfully compressed
+
+
+# Created at 2019-11-18T02:34:35.666
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.667
+Unexpected IOException with stream: Failed scenarios:
+
+
+# Created at 2019-11-18T02:34:35.669
+Unexpected IOException with stream: src/main/java/com/snow/feature/STRY0021103.feature:62 
+
+# Created at 2019-11-18T02:34:35.672
+Unexpected IOException with stream: # Scenario Outline: Verify whether Checkbox, "Unauthorized" in the "Related Records" tab underneath "Caused by Change" on the SIR form
+
+
+# Created at 2019-11-18T02:34:35.700
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.702
+Unexpected IOException with stream: 1
+
+# Created at 2019-11-18T02:34:35.703
+Unexpected IOException with stream:  Scenarios (
+
+# Created at 2019-11-18T02:34:35.715
+Unexpected IOException with stream: 1 failed
+
+# Created at 2019-11-18T02:34:35.716
+Unexpected IOException with stream: )
+
+
+# Created at 2019-11-18T02:34:35.717
+Unexpected IOException with stream: 19
+
+# Created at 2019-11-18T02:34:35.718
+Unexpected IOException with stream:  Steps (
+
+# Created at 2019-11-18T02:34:35.720
+Unexpected IOException with stream: 1 failed
+
+# Created at 2019-11-18T02:34:35.721
+Unexpected IOException with stream: , 
+
+# Created at 2019-11-18T02:34:35.722
+Unexpected IOException with stream: 11 skipped
+
+# Created at 2019-11-18T02:34:35.723
+Unexpected IOException with stream: , 
+
+# Created at 2019-11-18T02:34:35.726
+Unexpected IOException with stream: 7 passed
+
+# Created at 2019-11-18T02:34:35.727
+Unexpected IOException with stream: )
+
+
+# Created at 2019-11-18T02:34:35.728
+Unexpected IOException with stream: 0m
+
+# Created at 2019-11-18T02:34:35.730
+Unexpected IOException with stream: 56.133s
+
+
+# Created at 2019-11-18T02:34:35.735
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.739
+Unexpected IOException with stream: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : }
+  (Session info: chrome=78.0.3904.97)
+  (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds: null
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VBX00245', ip: '10.232.175.150', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.39.562718 (9a2698cba08cf5..., userDataDir: C:\Users\chaurma\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 78.0.3904.97, webStorageEnabled: true}
+Session ID: 56073cc9895fd64e4305267d15c6f496
+*** Element info: {Using=xpath, value=//*[@id="sn_si_incident.short_description"]}
+
+# Created at 2019-11-18T02:34:35.740
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.742
+Unexpected IOException with stream: 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+
+# Created at 2019-11-18T02:34:35.743
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.744
+Unexpected IOException with stream: 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+
+# Created at 2019-11-18T02:34:35.752
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.753
+Unexpected IOException with stream: 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+
+# Created at 2019-11-18T02:34:35.755
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.757
+Unexpected IOException with stream: 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+
+# Created at 2019-11-18T02:34:35.758
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.759
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+
+# Created at 2019-11-18T02:34:35.760
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.762
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:172)
+
+# Created at 2019-11-18T02:34:35.763
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.765
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+
+# Created at 2019-11-18T02:34:35.766
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.767
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+
+# Created at 2019-11-18T02:34:35.769
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.770
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+
+# Created at 2019-11-18T02:34:35.771
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.772
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+
+# Created at 2019-11-18T02:34:35.773
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.774
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+
+# Created at 2019-11-18T02:34:35.775
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.776
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+
+# Created at 2019-11-18T02:34:35.777
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.778
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+
+# Created at 2019-11-18T02:34:35.779
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.793
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+
+# Created at 2019-11-18T02:34:35.794
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.796
+Unexpected IOException with stream: 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+
+# Created at 2019-11-18T02:34:35.797
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.798
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+
+# Created at 2019-11-18T02:34:35.799
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.800
+Unexpected IOException with stream: 	at com.snow.customfunction.customefunction.sendKeys(customefunction.java:514)
+
+# Created at 2019-11-18T02:34:35.801
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.802
+Unexpected IOException with stream: 	at StepDefinition.TC01_STRY0021103.fille_the_short_description_as(TC01_STRY0021103.java:119)
+
+# Created at 2019-11-18T02:34:35.808
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.809
+Unexpected IOException with stream: 	at ?.And Fille the short description as "SC"(src/main/java/com/snow/feature/STRY0021103.feature:46)
+
+# Created at 2019-11-18T02:34:35.810
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:35.811
+Unexpected IOException with stream: 
+
+
+# Created at 2019-11-18T02:34:36.068
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGDirectoryTestSuite,Runnner.Testrunner01It,null,null,null
+
+
