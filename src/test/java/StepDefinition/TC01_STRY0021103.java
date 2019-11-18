@@ -1,16 +1,22 @@
 package StepDefinition;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.testng.asserts.SoftAssert;
 
 import com.service.pageobjectmanager.PageObjectManager;
 import com.service.pageobjectmanager.PageObjectManagerIETL;
 import com.snow.base.TestBase;
 import com.snow.customfunction.customefunction;
 import com.snow.finalVariable.FinalVar;
+import com.snow.pages.AdminHomePageApproveRequestItemtObj;
+import com.snow.pages.ConfirmationPage;
+import com.snow.pages.HPPrinterItemObj;
 import com.snow.pages.IncidentPage_MLF_Object;
+import com.snow.pages.RPSSDTechnicalSupportModeObj;
 import com.snow.textcontext.TextContext;
 import com.snow.util.DataHelper;
 
@@ -100,7 +106,6 @@ public class TC01_STRY0021103 {
 
 	@Given("^Fill the requested by as \"([^\"]*)\"$")
 	public void fill_the_requested_by_as(String arg1) throws Throwable {
-		customefunction.sleep(4000);
 	 xpath="//*[@id=\"sys_display.sn_si_incident.caller\"]";
 	 customefunction.waitVisibilityOfElementLocated(xpath, 15, TestBase.driver).click();
 	 customefunction.sendKeys(xpath, arg1, TestBase.driver);
@@ -159,47 +164,13 @@ public class TC01_STRY0021103 {
 	@Then("^search created SIR$")
 	public void search_created_SIR() throws Throwable {
 		TestBase.driver.switchTo().defaultContent();
-//		customefunction.sleep(3000);
-//		customefunction.cusFunSerrachINCorREQ(TestBase.driver, SIRNum);
-//		 customefunction.sleep(3000);
-		 xpath="//*[@id=\"filter\"]";
-		customefunction.waitVisibilityOfElementLocated(xpath, 15, TestBase.driver).click();
-		customefunction.sleep(2000);
-		customefunction.sendKeys(xpath, "Security inciden", TestBase.driver);
-		xpath="//*[text()=\"Visible to Me\"]";
-		customefunction.waitVisibilityOfElementLocated(xpath, 15, TestBase.driver).click();
-		customefunction.SwitchToFrmaeByNameOrID(TestBase.driver, "gsft_main"); 
-		xpath="//*[@id=\"sn_si_incident_breadcrumb\"]/a[1]/b";
-		customefunction.waitVisibilityOfElementLocated(xpath, 15, TestBase.driver).click();
-		xpath="//*[@id=\"sn_si_incident_filter_toggle_image\"]";
-		customefunction.waitVisibilityOfElementLocated(xpath, 15, TestBase.driver).click();
-		xpath="(//*[contains(text(),\"choose field\")][1]//following::span[1])[1]";
-		customefunction.waitVisibilityOfElementLocated(xpath, 15, TestBase.driver).click();
-		xpath="(//*[contains(@id,'select2-drop')]//div//following::ul//child::li//..)[1]//..//input";
-		customefunction.waitVisibilityOfElementLocated(xpath, 15, TestBase.driver).click();
-		customefunction.sendKeys(xpath, "Number", TestBase.driver);
-		xpath="//*[contains(@id,'select2-drop')]//div//following::ul//child::li[1]";
-		customefunction.waitVisibilityOfElementLocated(xpath, 15, TestBase.driver).click();
-		xpath="//*[@id=\"oper\"]/select";
-		customefunction.SelectValueFromDrp(TestBase.driver, xpath, "is");
-		xpath="//*[@id=\"value\"]/input";
-		customefunction.sendKeys(xpath, SIRNum, TestBase.driver);
-		xpath="//*[@id=\"test_filter_action_toolbar_run\"]";
-		customefunction.waitVisibilityOfElementLocated(xpath, 15, TestBase.driver).click();
-		xpath="(//table[@id=\"sn_si_incident_table\"]//tr)[3]//td[3]//a";
-		customefunction.waitVisibilityOfElementLocated(xpath, 15, TestBase.driver).click();
-		
-		
-		
-		
-		
-		
-		
+		customefunction.cusFunSerrachINCorREQ(TestBase.driver, SIRNum);
+		 customefunction.sleep(3000);
 	}
 
 	@When("^scroll to the update button$")
 	public void scroll_to_the_update_button() throws Throwable {
-		//customefunction.SwitchToFrmaeByNameOrID(TestBase.driver, "gsft_main"); 
+		customefunction.SwitchToFrmaeByNameOrID(TestBase.driver, "gsft_main"); 
 		 xpath="(//*[@id=\"sysverb_update\"])[2]";
 			customefunction.cFunScrollToElement(xpath, TestBase.driver);  
 	}

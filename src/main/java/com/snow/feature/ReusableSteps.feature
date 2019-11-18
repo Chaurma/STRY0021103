@@ -27,7 +27,7 @@ Then close the browser
 
 Examples:
 |Requested for|Country|Item|AutomateShortDescriptionTask|AssignedToTask|ScreenhsotFoldername|row_Index|ColumnName|
-|Jose yamin|Canada|Virtual Computer (VDI) (Canada, US)|Virtual Computer Add - Add Virtual Computer to asset system and assign to user|Adolf Evancar Peralta|STRY0019968_WithID_VirtualComputer|1|MLF SubCategory Requirment|
+|poddepa|Canada|Virtual Computer (VDI) (Canada, US)|Virtual Computer Add - Add Virtual Computer to asset system and assign to user|Adolf Evancar Peralta|STRY0019968_WithID_VirtualComputer|1|MLF SubCategory Requirment|
 
 
 #To create incident from MLF and bridge with any external vendor
@@ -110,6 +110,49 @@ Examples:
 |Assigned To|Souce|ScreenhsotFoldername|user|row_Index|VerifyMessage|user2|
 |AVAYA_Integ-ServiceDesk-IPCR|Integration from AVAYA|STRY0021263_TC04|poddepa|1|This is an automated email, please do not reply.|chaurma|
 
+
+@Sixth
+Scenario Outline: Rest validation
+Given user launch the ITIL view
+And Open new ticket in ServiceNow at MLF
+And Fill description and short description along with all mandatory field
+And Take Screenshot "<ScreenhsotFoldername>" from first driver
+And set the priority as high
+And select the business CI
+Then submit the incident
+And Refresh the page
+#And again search the incident
+Then scroll to the work note
+And verify the priority incident tab is being displayed
+And then click on the priority incident tab
+Then verify the "Customer Facing" is getting displayed
+And Take Screenshot "<ScreenhsotFoldername>" from first driver
+Then click on the "Customer facing
+And Take Screenshot "<ScreenhsotFoldername>" from first driver
+And verify the values (None, Yes, No )
+And Take Screenshot "<ScreenhsotFoldername>" from first driver
+And then select "Yes"
+And Take Screenshot "<ScreenhsotFoldername>" from first driver
+#When MLF incident gets bridge with CSC
+#Then take the CSC incident ticket number and take screenshot "<ScreenhsotFoldername>"
+And Clicks on the resolve button after filling category and subcategory as "<row_Index>"
+And Take Screenshot "<ScreenhsotFoldername>" from first driver
+And Refresh the page
+And Take Screenshot "<ScreenhsotFoldername>" from first driver
+Then Click on the REST tab
+And then click on the rest link
+And get the JSON rest request
+And Take Screenshot "<ScreenhsotFoldername>" from first driver
+#Then close the browser
+
+Examples:
+
+|Assigned To|Souce|ScreenhsotFoldername|row_Index|
+|AVAYA_Integ-ServiceDesk-IPCR|Integration from AVAYA|STRY0020811_TC06|1|
+
+@Report 
+Scenario: Report
+Given user launch the ITIL view
 
 
 #<-------Reusable to check if manager approval is required for RITM and then click on the RITM

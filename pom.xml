@@ -202,6 +202,18 @@
     <artifactId>jcommander</artifactId>
     <version>1.78</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/org.json/json -->
+<dependency>
+    <groupId>com.jayway.jsonpath</groupId>
+    <artifactId>json-path</artifactId>
+    <version>2.0.0</version>
+</dependency>
+<dependency>
+    <groupId>com.googlecode.json-simple</groupId>
+    <artifactId>json-simple</artifactId>
+    <version>1.1</version>
+</dependency>
+
 
 <dependency>
     <groupId>commons-io</groupId>
@@ -320,7 +332,7 @@
   <forkCount>7</forkCount>
   <reuseForks>true</reuseForks>
   <includes>
-  <include>**/*testrunner*It.java</include>
+  <include>**/*Testrunner*It.java</include>
   </includes>
    <testFailureIgnore>true</testFailureIgnore>
  </configuration>

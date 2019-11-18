@@ -40,12 +40,12 @@ public static IncidentPage_MLF_Object getIncidentPage_MLF_Object(){
 	 
 	 }
 public static IncidentPage_DXC_Object getIncidentPage_DXC_Object(){
-	IncidentPage_DXC = null;
+	//IncidentPage_DXC = null;
 	 return (IncidentPage_DXC == null) ? IncidentPage_DXC = new IncidentPage_DXC_Object(driver) : IncidentPage_DXC;
 	 
 	 }
 public static RITMpageObj getRITMpageObj(){
-
+	//IncidentPage_DXC = null;
 	RITMpage=null;
 	 return (RITMpage == null) ? RITMpage = new RITMpageObj(driver) : RITMpage;
 	 

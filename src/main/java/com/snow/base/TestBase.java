@@ -5,20 +5,22 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.Properties;
+import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.xml.DOMConfigurator;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
 
 import com.service.pageobjectmanager.FileReaderManager;
+import com.snow.customfunction.customefunction;
 import com.snow.log.Log;
-
 import com.snow.util.TestUtil;
 
 
@@ -27,6 +29,7 @@ public class TestBase {
 	public static Properties prop;
 	 public static WebDriver driver;
 	 public static WebDriver driver2;
+	
 	 
 	
 	public TestBase()
@@ -73,7 +76,20 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.implicit_wait, TimeUnit.SECONDS);
+		System.out.println("Initial5 : "+driver);
+		try
+		{
 		driver.get(prop.getProperty(string));
+		
+		
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		System.out.println("Initial6 : "+driver);
+		
 		return driver;
 	}
 	
@@ -124,11 +140,27 @@ public static File captureScreenMethod(WebDriver driver2,String TestcaseNumber) 
 		String timeStamp=dateFormat.format(new Date());
 		TakesScreenshot tk=((TakesScreenshot)driver2);
 	File src=	tk.getScreenshotAs(OutputType.FILE);
-	String str=FileReaderManager.getInstance().getConfigReader().getScreenshotFolderPath();
-	System.out.println("Str :"+str);
-	File dst=new File(str+prop.getProperty(TestcaseNumber)+ "\\screenshots" + timeStamp + ".png");
-	try {
+	//String str=FileReaderManager.getInstance().getConfigReader().getScreenshotFolderPath();
+	//System.out.println("Str :"+str);
+	StringTokenizer st1 = 
+            new StringTokenizer(System.getProperty("user.dir"), "\\"); 
+	LinkedList<String> ls=new LinkedList<String>();
+	
+	while (st1.hasMoreTokens()) 
+	{
+		ls.add(st1.nextToken());
+	}
+	
+	StringBuilder  ScreenshotDir = new StringBuilder ();
+
+	for(int i=0;i<ls.size()-1;i++)
+	{
+	ScreenshotDir.append("\\"+ls.get(i));
 		
+	}
+	System.out.println("Dir : "+"\\"+ScreenshotDir+"\\"+prop.getProperty(TestcaseNumber));
+	File dst=new File("\\"+ScreenshotDir+"\\"+prop.getProperty(TestcaseNumber)+ "\\screenshots" + timeStamp + ".png");
+	try {
 		FileUtils.copyFile(src, dst);
 	} catch (IOException e) {
 		

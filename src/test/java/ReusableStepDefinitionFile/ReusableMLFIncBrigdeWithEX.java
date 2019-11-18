@@ -29,6 +29,8 @@ import cucumber.api.java.en.When;
 public class ReusableMLFIncBrigdeWithEX  extends TestBase {
 	
 	
+	
+	
 	public static WebDriver driver;
 	 public static WebDriver driver2;
 	public static PageObjectManagerIETL PageObjectManagerIETL;
@@ -44,26 +46,33 @@ public class ReusableMLFIncBrigdeWithEX  extends TestBase {
 	public static PageObjectManager PageObjectManager;
 	
 	public static TextContext textContext;
+	public static String ShortDescription;
 	
 	List<HashMap<String, String>> dataSet;
 	@SuppressWarnings("static-access")
 	public ReusableMLFIncBrigdeWithEX(TextContext context)
 	{
-
+		
+//		driver=initialization("url2");
 		textContext=	context;
 		
-//		try {
-//			dataSet = DataHelper.readExcelDatafromFile(System.getProperty("user.dir")+
-//					FinalVar.ExcelPathRead, "Data");
-//			System.out.println("FinalVar : "+System.getProperty("user.dir")+FinalVar.ExcelPathWrite);
+		try {
+			dataSet = DataHelper.readExcelDatafromFile(System.getProperty("user.dir")+
+					FinalVar.ExcelPathRead, "Sheet1");
+			System.out.println("FinalVar : "+System.getProperty("user.dir")+FinalVar.ExcelPathWrite);
 //			System.out.println("Dataset : "+
 //			dataSet);
+
+			//@SuppressWarnings("rawtypes")
+			//Iterator itr = dataSet.iterator();
 //
-//
-//			} catch (Exception e) {
-//			e.printStackTrace();
+//			while (itr.hasNext()) {
+//			System.out.println("rrr : " + "\n" + itr.next());
 //			}
-//		
+			} catch (Exception e) {
+			e.printStackTrace();
+			}
+		
 		
 	}
 	
@@ -126,7 +135,8 @@ public class ReusableMLFIncBrigdeWithEX  extends TestBase {
 		customefunction.pressEnter();
 		IncidentPage_MLF.set_Requestedfor("Payel Podder");
 		customefunction.pressEnter();
-		IncidentPage_MLF.set_ShortDescription("MLF to Avaya integration");
+		IncidentPage_MLF.set_ShortDescription("Check if MLF is getting bridged with Avaya");
+		ShortDescription="Check if MLF is getting bridged with Avaya";
 		IncidentPage_MLF.set_Description("Check if MLF is getting bridged with Avaya");
 		customefunction.cFunSelectValueByIndexXpath("//*[@id=\"incident.u_best_contact_number\"]", TestBase.driver);
 		customefunction.sendKeys("//*[@id=\"incident.u_best_contact_number\"]","8697884711",TestBase.driver);
@@ -310,6 +320,47 @@ System.out.println("AdminHomePage : "+AdminHomePage);
 //		Log.info("DXC Incident Number :"  +IncidentPage_MLF.cfunToRetrieveDXCIncNum(driver));
 //		Reporter.addStepLog("Avaya incident number "+IncidentNumber);
 	}
+//	@SuppressWarnings("static-access")
+//	@And("^Clicks on the resolve button after filling category and subcategory as \"([^\"]*)\"$")
+//	public void clicks_on_the_resolve_button(String excelDataRow)  {
+//		try
+//		{
+//		int dataRow = Integer.parseInt(excelDataRow)-1;
+//		System.out.println("DD :"+dataRow);
+//		
+//		IncidentPage_MLF=PageObjectManagerIETL.getIncidentPage_MLF_Object(); 
+//		IncidentPage_MLF.ClickOnResolveButton();
+//		customefunction.sleep(3000);
+//		IncidentPage_MLF.Clickon_ActivityLogTab();
+//		customefunction.sleep(2000);
+//		IncidentPage_MLF.SendCommentInWorkNote("Work");
+//		customefunction.sleep(2000);
+//		IncidentPage_MLF.ClickOnResolveButton();
+//		customefunction.sleep(2000);
+//		text="svcAvayaRestIntegration";
+//		IncidentPage_MLF.SetValue_AssignedTo(text);
+//		customefunction.sleep(2000);
+//		//text="Customer Resolved";
+//		System.out.println("dataSet.get(dataRow).get(\"MLF Category Requirment\") : "+dataSet.get(dataRow).get("MLF Category Requirment"));
+//		text=dataSet.get(dataRow).get("MLF Category Requirment").trim();
+//		
+//	
+//		IncidentPage_MLF.Select_CategoryFieldByText(text);
+//		customefunction.sleep(2000);
+//		System.out.println("Cons2");
+//		text=dataSet.get(dataRow).get("MLF SubCategory Requirment").trim();
+//		IncidentPage_MLF.Select_SubCategoryFieldByText(text);
+//		customefunction.sleep(2000);
+//		DataHelper.setCellData("Pankaj Chaurasia", dataRow+1, 12,System.getProperty("user.dir")+FinalVar.ExcelPathWrite,"Sheet1");
+//		IncidentPage_MLF.ClickOn_ClosureTabAndFillDetails();
+//		IncidentPage_MLF.ClickOnResolveButton();
+//	}
+//		catch(Exception e)
+//		{
+//			e.printStackTrace();
+//		}
+//	}
+	
 	@SuppressWarnings("static-access")
 	@And("^Clicks on the resolve button after filling category and subcategory as \"([^\"]*)\"$")
 	public void clicks_on_the_resolve_button(String excelDataRow)  {
@@ -317,7 +368,7 @@ System.out.println("AdminHomePage : "+AdminHomePage);
 		{
 		int dataRow = Integer.parseInt(excelDataRow)-1;
 		System.out.println("DD :"+dataRow);
-		
+		PageObjectManagerIETL = new PageObjectManagerIETL(TestBase.driver);
 		IncidentPage_MLF=PageObjectManagerIETL.getIncidentPage_MLF_Object(); 
 		IncidentPage_MLF.ClickOnResolveButton();
 		customefunction.sleep(3000);
@@ -327,7 +378,7 @@ System.out.println("AdminHomePage : "+AdminHomePage);
 		customefunction.sleep(2000);
 		IncidentPage_MLF.ClickOnResolveButton();
 		customefunction.sleep(2000);
-		text="svcAvayaRestIntegration";
+		text="IBM Escalation";
 		IncidentPage_MLF.SetValue_AssignedTo(text);
 		customefunction.sleep(2000);
 		//text="Customer Resolved";

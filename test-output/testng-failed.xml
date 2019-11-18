@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <parameter name="FormTitle" value="RPS SD Technical Support Model (US)"/>
+  <parameter name="assignedTo" value="Sarah Van Opstal"/>
+  <test name="Test(failed)">
+    <parameter name="FormTitle" value="RPS SD Technical Support Model (US)"/>
+    <parameter name="assignedTo" value="Sarah Van Opstal"/>
+    <classes>
+      <class name="com.snow.testcases.TC01_Permissionmodel_SaveRestInXML">
+        <methods>
+          <include name="Perfor_All_Steps_Of_TestCase"/>
+          <include name="Perform_common_task"/>
+        </methods>
+      </class> <!-- com.snow.testcases.TC01_Permissionmodel_SaveRestInXML -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

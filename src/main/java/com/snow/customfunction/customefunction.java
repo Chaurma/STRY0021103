@@ -12,6 +12,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -19,6 +20,7 @@ import org.apache.commons.io.FileUtils;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.io.SAXReader;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -26,11 +28,13 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.cucumber.listener.Reporter;
-
+import com.google.common.base.Function;
 import com.service.pageobjectmanager.PageObjectManager;
 import com.service.pageobjectmanager.PageObjectManagerIETL;
 import com.snow.pages.AdminHomePageApproveRequestItemtObj;
@@ -324,6 +328,30 @@ public static void cFunScrollToElementt(WebElement ele,WebDriver driver) {
 			
 		}
 	}
+	
+	public WebElement FluentWait(final String xapth, int waitTime, WebDriver driver3) {
+		Wait<WebDriver> wt = new FluentWait<>(driver3).withTimeout(waitTime, TimeUnit.SECONDS)
+				.pollingEvery(5, TimeUnit.SECONDS).ignoring(NoSuchElementException.class)
+				.ignoring(NullPointerException.class).ignoring(Exception.class);
+
+		Function<WebDriver, WebElement> fn = new Function<WebDriver, WebElement>() {
+			@Override
+			public WebElement apply(WebDriver dr) {
+				WebElement ele = dr.findElement(By.xpath(xapth));
+				String val = ele.getAttribute("value");
+				if (val.equalsIgnoreCase("WebDriver")) {
+					return ele;
+				} else {
+					System.out.println("Defaul value : " + val);
+					return null;
+				}
+			}
+
+		};
+		return wt.until(fn);
+
+	}
+
 	public static String getORvalue2(String data, String xmlFilePath) {
 		try {
 			xmlFilePath="C:\\Users\\chaurma\\eclipse-workspace\\SnowNowPageObjectFramework\\ObjectRepository.xml";
@@ -484,7 +512,6 @@ public static void cFunScrollToElementt(WebElement ele,WebDriver driver) {
 	}
 	public static void sendKeys(String string, String string2, WebDriver driver3) {
 		ele=driver3.findElement(By.xpath(string));
-		ele.clear();
 		ele.sendKeys(string2);
 				
 			}
@@ -547,6 +574,25 @@ public static void cFunScrollToElementt(WebElement ele,WebDriver driver) {
 			
 		}
 		Reporter.addStepLog("Selected Value is at position ["+i+"] : " + selVal); 
+	}
+	
+	public static void IsWebAlertPresent(WebDriver driver3, int i) {
+		WebDriverWait wt=new WebDriverWait(driver3,20);
+		
+	      
+	        Alert alert = driver3.switchTo().alert();
+	        driver3.switchTo().alert(); 
+	        System.out.println("Alert is Present");
+	        
+//		if(wt.until(ExpectedConditions.alertIsPresent()) != null)
+//		{
+//			System.out.println("Alert is Present");
+//		}
+//		else
+//		{
+//			System.out.println("Alert not Present");
+//		}
+//		
 	}
 	
 

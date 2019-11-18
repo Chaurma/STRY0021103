@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class TestUtil {
 public static long pag_load_timeout=20;
-public static long implicit_wait=15;
+public static long implicit_wait=20;
 //
 //static Xls_Reader reader;
 //

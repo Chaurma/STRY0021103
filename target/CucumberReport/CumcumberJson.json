@@ -1,0 +1,86 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#Author: Rahul Chhabria"
+      },
+      {
+        "line": 2,
+        "value": "#Short description: RITM02279450 - Add Caused by Change, Unauthorized"
+      },
+      {
+        "line": 3,
+        "value": "#Sprint: 2019-11 November Monthly Sprint"
+      },
+      {
+        "line": 4,
+        "value": "#Release: ServiceNow Monthly Enhancements Release"
+      }
+    ],
+    "line": 6,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 14579500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.BeforeSteps()"
+            }
+          }
+        ],
+        "line": 62,
+        "name": "Verify whether Checkbox, \"Unauthorized\" in the \"Related Records\" tab underneath \"Caused by Change\" on the SIR form",
+        "description": "",
+        "id": "ritm02279450---add-caused-by-change,-unauthorized;verify-whether-checkbox,-\"unauthorized\"-in-the-\"related-records\"-tab-underneath-\"caused-by-change\"-on-the-sir-form;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 41843712800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterSteps()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 20673930900,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 38,
+                "value": "#STRY0021103_TC02_Checkbox"
+              }
+            ],
+            "line": 39,
+            "name": "user launch the ITIL view",
+            "match": {
+              "location": "ReusableMLFIncBrigdeWithEX.user_launch_the_ITIL_view()"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "line": 36,
+            "name": "@Second"
+          }
+        ]
+      }
+    ],
+    "name": "RITM02279450 - Add Caused by Change, Unauthorized",
+    "description": "",
+    "id": "ritm02279450---add-caused-by-change,-unauthorized",
+    "keyword": "Feature",
+    "uri": "src/main/java/com/snow/feature/STRY0021103.feature"
+  }
+]
