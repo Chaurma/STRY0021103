@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="144.818682">
-<testcase classname="RITM02279450 - Add Caused by Change, Unauthorized" name="Verify whether Checkbox, &quot;Unauthorized&quot; in the &quot;Related Records&quot; tab underneath &quot;Caused by Change&quot; on the SIR form" time="144.818682">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="83.335399">
+<testcase classname="RITM02279450 - Add Caused by Change, Unauthorized" name="Verify whether Checkbox, &quot;Unauthorized&quot; in the &quot;Related Records&quot; tab underneath &quot;Caused by Change&quot; on the SIR form" time="83.335399">
 <system-out><![CDATA[Given user launch the ITIL view.............................................passed
 And type "Security Incident" in filter navigator............................passed
 And Cliks on the "Visible to Me" option.....................................passed
