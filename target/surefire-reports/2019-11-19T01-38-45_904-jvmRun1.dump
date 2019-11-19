@@ -1,7 +1,7 @@
-# Created at 2019-11-18T02:08:10.293
+# Created at 2019-11-19T01:38:51.803
 System.exit() or native command error interrupted process checker.
-java.lang.IllegalStateException: error [STOPPED] to read process 18008
-	at org.apache.maven.surefire.booter.PpidChecker.checkProcessInfo(PpidChecker.java:145)
+java.lang.IllegalStateException: Cannot use PPID 11344 process information. Going to use NOOP events.
+	at org.apache.maven.surefire.booter.PpidChecker.checkProcessInfo(PpidChecker.java:155)
 	at org.apache.maven.surefire.booter.PpidChecker.isProcessAlive(PpidChecker.java:116)
 	at org.apache.maven.surefire.booter.ForkedBooter$2.run(ForkedBooter.java:214)
 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
